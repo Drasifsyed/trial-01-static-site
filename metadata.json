@@ -1,0 +1,6 @@
+{
+  "name": "Hostinger Static Website Exporter",
+  "description": "An interactive playground to customize, preview, inspect, and download a modern static HTML/CSS/JS website tailored for direct upload to Hostinger Shared Hosting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
