@@ -1678,7 +1678,8 @@ export function getPackageJson(config: WebsiteConfig): string {
   "description": "Static website built for direct deployment to Hostinger public_html",
   "private": true,
   "scripts": {
-    "start": "echo 'Static website - direct HTML rendering inside public_html'"
+    "build": "echo 'Static HTML website - no Node build required'",
+    "start": "echo 'Static HTML website - direct HTML rendering inside public_html'"
   }
 }
 `;

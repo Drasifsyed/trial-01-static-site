@@ -792,6 +792,26 @@ export default function App() {
                   Deploying to Hostinger hPanel
                 </span>
                 
+                <div className="p-3 bg-rose-500/10 border border-rose-500/20 text-rose-300 rounded-xl space-y-1.5">
+                  <span className="text-xs font-bold block flex items-center gap-1 text-rose-200">
+                    🚨 Hostinger Rollup / GLIBC_2.29 Error Fix
+                  </span>
+                  <p className="text-xxs leading-relaxed text-rose-100/90">
+                    If you ran a Git deployment on Hostinger and got <code className="bg-rose-950/80 text-rose-200 px-1 py-0.5 rounded font-mono">GLIBC_2.29 not found / @rollup/rollup-linux-x64-gnu</code>:
+                  </p>
+                  <ul className="text-xxs list-disc list-inside text-rose-100 space-y-1 pt-0.5">
+                    <li>
+                      <strong>Cause:</strong> Hostinger tried to run Node/Vite build commands on their server container, which lacks GLIBC 2.29.
+                    </li>
+                    <li>
+                      <strong>Solution 1 (Recommended):</strong> Export using the <strong>"Download Hostinger ZIP"</strong> button above, then upload & extract directly into Hostinger's <code className="bg-rose-950/80 text-rose-200 px-1 py-0.5 rounded font-mono">public_html</code> via File Manager. Pure static HTML requires zero build tools!
+                    </li>
+                    <li>
+                      <strong>Solution 2 (Hostinger Git Deployment):</strong> In Hostinger hPanel Git settings, set <strong>Build Command</strong> to <code className="bg-rose-950/80 text-amber-200 px-1 py-0.5 rounded font-mono">echo 'static site'</code> or choose <strong>Static Website</strong> deployment mode.
+                    </li>
+                  </ul>
+                </div>
+
                 <div className="p-3 bg-amber-500/10 border border-amber-500/20 text-amber-300 rounded-xl space-y-1">
                   <span className="text-xs font-bold block flex items-center gap-1">
                     ⚡ Hostinger Deploy Note ("Missing package.json")
